@@ -1,5 +1,3 @@
-
-
 require 'date'
 
 # Create class ITEM

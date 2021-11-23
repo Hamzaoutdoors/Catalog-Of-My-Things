@@ -1,5 +1,3 @@
-
-
 #  rubocop:disable all
 
 # Create class main
