@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 
+#  rubocop:disable all
+
+# Create class main
+
 class Main
+
   def run
     response = nil
     puts 'Welcome to Catalog of my things'
@@ -25,11 +30,9 @@ class Main
       when '1'
         puts 'Book'
       end
-      end
-
     end
   end
-
+end
 
 main = Main.new
 
