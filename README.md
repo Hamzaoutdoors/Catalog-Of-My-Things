@@ -33,6 +33,11 @@
 ## Authors
 ---
 
+👤 **Carlos Feliz**
+
+- GitHub: [@xJokeer](https://github.com/xJokeer)
+- LinkedIn: [@ElimFeliz](https://www.linkedin.com/in/elimfeliz/)
+
 👤 **Rotimi Azeez**
 
 - GitHub: [@rotimiazeez](https://github.com/rotimiazeez)
