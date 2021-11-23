@@ -2,9 +2,8 @@ require 'date'
 
 # Create class ITEM
 class Item
+  attr_accessor :genre, :author, :source, :label, :publish_date
   attr_reader :id
-
-  attr_accessor :genre, :author, :source, :label, :publish_date, :archived
 
   def initialize(publish_date)
     @id = Random.rand(1..10_000)
@@ -27,6 +26,3 @@ class Item
     Date.today > archived_date
   end
 end
-
-# item = Item.new('2011-11-24')
-# puts item.can_be_archived?
