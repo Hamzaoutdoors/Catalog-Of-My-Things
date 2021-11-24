@@ -1,7 +1,6 @@
 require './music_album'
 
 module ListItems
-  INPT_MSG = 'Enter your option number here --> '.freeze
   def initialize
     @list_item_option = '0'
   end
@@ -30,7 +29,7 @@ module ListItems
   def list_items
     until %w[1 2 3].include?(@list_item_option)
       list_items_option
-      print INPT_MSG
+      print 'Enter your option number here --> '
       @list_item_option = gets.chomp
       list_selected_item
     end
