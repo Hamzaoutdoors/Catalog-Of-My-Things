@@ -1,6 +1,6 @@
 #  rubocop:disable all
 
-require './addItem_module'
+require './add_item_module'
 
 class App
   include ItemIntializer
@@ -13,16 +13,14 @@ class App
     @labels = []
     @authors = []
     @choice_list = {
-      '1' => 'Create a book 📗',
-      '2' => 'Create a Music Album 🎶',
-      '3' => 'Create a Game 🎮',
-      '4' => 'List all books.',
-      '5' => 'List all music albums.',
-      '6' => 'List of games.',
-      '7' => 'List all genres.',
-      '8' => 'List all labels.',
-      '9' => 'List all authors.',
-      '10' => 'Exit'
+      '1' => 'Create an Item',
+      '2' => 'List all books.',
+      '3' => 'List all music albums.',
+      '4' => 'List of games.',
+      '5' => 'List all genres.',
+      '6' => 'List all labels.',
+      '7' => 'List all authors.',
+      '8' => 'Exit'
     }  
   end
 
@@ -50,9 +48,9 @@ class App
   def handle_option(option)
     case option
     when '1'
-      puts 'Book'
+      create_item
     when '2'
-      create_music_album
+      puts 'hey'
     else
       puts 'That is not a valid option ❌'
     end

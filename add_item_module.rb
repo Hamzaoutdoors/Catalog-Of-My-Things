@@ -2,6 +2,40 @@ require './music_album'
 require 'date'
 
 module ItemIntializer
+  def initialize
+    @item_option = '0'
+  end
+
+  def items_option
+    puts "\n Which item do you want to add to your catalog :"
+    puts "1) Create a book 📗"
+    puts "2) Create a Music Album 🎶"
+    puts "3) Create a Game 🎮"
+    puts "\n"
+  end
+
+  def add_selected_item
+    case @item_option
+    when '1'
+      create_book
+    when '2'
+      create_music_album
+    when '3'
+      create_game
+    else
+      "\nCould you please choose a valid number\n"
+    end
+  end
+
+  def create_item
+    until ['1', '2', '3'].include?(@item_option)
+      items_option
+      @item_option = gets.chomp
+      add_selected_item
+    end
+    @item_option = '0'
+  end
+
   def music_album_info
     print 'Published date (yyyy-mm-dd): '
     date_answer = gets.chomp
@@ -50,5 +84,13 @@ module ItemIntializer
       answer = gets.chomp
       validate_date(answer)
     end
+  end
+
+  def create_book
+    puts 'book'
+  end
+
+  def create_game
+    puts 'game'
   end
 end
