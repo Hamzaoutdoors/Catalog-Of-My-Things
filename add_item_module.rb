@@ -38,7 +38,14 @@ module ItemIntializer
     @item_option = '0'
   end
 
+  # Music Album handlers
+  def music_album_name
+    print "Add your music album\'s name : "
+    gets.chomp.to_s
+  end
+
   def music_album_info
+    name = music_album_name
     print 'Published date (yyyy-mm-dd): '
     date_answer = gets.chomp
     publish_date = validate_date(date_answer)
@@ -48,14 +55,7 @@ module ItemIntializer
     answer = gets.chomp.downcase
     on_spotify = on_spotify?(answer)
 
-    puts 'Music album created successfully ✔️'
-    [publish_date, on_spotify]
-  end
-
-  def create_music_album
-    publish_date, on_spotify = music_album_info
-    music_album = MusicAlbum.new(publish_date, on_spotify)
-    @music_albums << music_album
+    [name, publish_date, on_spotify]
   end
 
   def on_spotify?(answer)
@@ -82,17 +82,27 @@ module ItemIntializer
     if validate?(date)
       date
     else
-      print 'Add a valid date [yyyy-mm-dd] : '
+      print 'Add a valid date format [yyyy-mm-dd] : '
       answer = gets.chomp
       validate_date(answer)
     end
   end
 
-  def create_book
-    puts 'book'
+  # Add music album to genres
+  def music_album_genre
+    list_genres
+    print "\n Select you Music Album\'s genre by number:  "
+    genre_index = gets.chomp.to_i
+    @genres[genre_index]
   end
 
-  def create_game
-    puts 'game'
+  # Create MusicAlbum main method
+  def create_music_album
+    name, publish_date, on_spotify = music_album_info
+    music_album = MusicAlbum.new(name, publish_date, on_spotify)
+    genre = music_album_genre
+    genre.add_item(music_album)
+    @music_albums << music_album
+    puts 'Music album created successfully ✔️'
   end
 end

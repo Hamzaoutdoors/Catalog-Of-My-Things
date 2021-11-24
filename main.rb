@@ -1,26 +1,27 @@
 #  rubocop:disable all
-
+require_relative 'genre'
 require './add_item_module'
+require './list_items_module'
+
 
 class App
   include ItemIntializer
+  include ListItems
 
   def initialize
     @books = []
     @music_albums = []
     @games = []
-    @genres = []
+    @genres = [Genre.new('Blues'), Genre.new('Classical Music'), Genre.new('Hip hop'), Genre.new('Rap'), Genre.new('Pop'), Genre.new('House')]
     @labels = []
     @authors = []
     @choice_list = {
       '1' => 'Create an Item',
-      '2' => 'List all books.',
-      '3' => 'List all music albums.',
-      '4' => 'List of games.',
-      '5' => 'List all genres.',
-      '6' => 'List all labels.',
-      '7' => 'List all authors.',
-      '8' => 'Exit'
+      '2' => 'List all items.',
+      '3' => 'List all genres.',
+      '4' => 'List all labels.',
+      '5' => 'List all authors.',
+      '6' => 'Exit'
     }  
   end
 
@@ -35,7 +36,7 @@ class App
       end
       print "\nYour option ==> "
       option = gets.chomp
-      if option == '10'
+      if option == '6'
         break
       end
 
@@ -50,7 +51,9 @@ class App
     when '1'
       create_item
     when '2'
-      puts 'hey'
+      list_items
+    when '3'
+      list_genres
     else
       puts 'That is not a valid option ❌'
     end
