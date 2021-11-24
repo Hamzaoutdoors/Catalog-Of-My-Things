@@ -15,7 +15,7 @@ class MusicAlbum < Item
   end
 
   def to_s
-    "Album\'s name : \" #{@name} \", Published on :#{@publish_date}"
+    "Album\'s name : \"#{@name.capitalize!}\", Genre : \"#{self.genre.name}\"  ~ Published on : #{@publish_date}"
   end
 
   def can_be_archived?
@@ -24,8 +24,3 @@ class MusicAlbum < Item
 
   private :can_be_archived?
 end
-
-# music = MusicAlbum.new('hamza', '2020-10-10', true)
-# genre = Genre.new('Hiphup')
-# genre.add_item(music)
-# puts music
