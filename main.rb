@@ -1,37 +1,65 @@
 #  rubocop:disable all
 
-# Create class main
+require './addItem_module'
 
-class Main
+class App
+  include ItemIntializer
+
+  def initialize
+    @books = []
+    @music_albums = []
+    @games = []
+    @genres = []
+    @labels = []
+    @authors = []
+    @choice_list = {
+      '1' => 'Create a book 📗',
+      '2' => 'Create a Music Album 🎶',
+      '3' => 'Create a Game 🎮',
+      '4' => 'List all books.',
+      '5' => 'List all music albums.',
+      '6' => 'List of games.',
+      '7' => 'List all genres.',
+      '8' => 'List all labels.',
+      '9' => 'List all authors.',
+      '10' => 'Exit'
+    }  
+  end
 
   def run
-    response = nil
-    puts 'Welcome to Catalog of my things'
+    puts "Welcome to the Catalog of your Things 🗂️ \n"
 
-    while response != 10
-      puts 'please choose an option by entering a number :'
-      puts '1 - Add book.'
-      puts '2 - Add music album.'
-      puts '3 - Add game.'
-      puts '4 - List all books.'
-      puts '5 - List all music albums.'
-      puts '6 - List of games.'
-      puts '7 - List all genres.'
-      puts '8 - List all labels.'
-      puts '9 - List all authors.'
-      puts '10 - Exit.'
-
-      response = gets.chomp
-
+    loop do
+      puts "\nPlease choose your option by entering a number 😊 :"
       puts "\n"
-      case response
-      when '1'
-        puts 'Book'
+      @choice_list.each do |key, value|
+        puts "#{key} - #{value}"
       end
+      print "\nYour option ==> "
+      option = gets.chomp
+      if option == '10'
+        break
+      end
+
+      handle_option(option)
+    end
+
+    puts "\n Thank you for using this app 🙏🏻"
+  end
+
+  def handle_option(option)
+    case option
+    when '1'
+      puts 'Book'
+    when '2'
+      create_music_album
+    else
+      puts 'That is not a valid option ❌'
     end
   end
 end
 
-main = Main.new
 
-main.say_hey
+app = App.new
+
+app.run
