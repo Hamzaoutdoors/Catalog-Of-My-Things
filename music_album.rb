@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # MusicAlbum Class
 require_relative 'item'
 
