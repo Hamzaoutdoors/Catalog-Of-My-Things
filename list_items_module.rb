@@ -1,0 +1,58 @@
+require './music_album'
+
+module ListItems
+  INPT_MSG = 'Enter your option number here --> '.freeze
+  def initialize
+    @list_item_option = '0'
+  end
+
+  def list_items_option
+    puts "\n Which item do you wish to list :"
+    puts '1) List all books '
+    puts '2) List all music albums'
+    puts '3) List all games'
+    puts "\n"
+  end
+
+  def list_selected_item
+    case @list_item_option
+    when '1'
+      list_books
+    when '2'
+      list_music_albums
+    when '3'
+      list_games
+    else
+      "\nCould you please choose a valid number\n"
+    end
+  end
+
+  def list_items
+    until %w[1 2 3].include?(@list_item_option)
+      list_items_option
+      print INPT_MSG
+      @list_item_option = gets.chomp
+      list_selected_item
+    end
+    @list_item_option = '0'
+  end
+
+  def list_music_albums
+    puts "\n List of your Music Albums : "
+    puts "\n ~ Your music albums list is empty ~" if @music_albums.empty?
+    @music_albums.each { |music_album| puts music_album }
+  end
+
+  def list_genres
+    puts "\n List of genres : "
+    @genres.each_with_index { |genre, index| puts "#{index}) Genre ~ #{genre.name}" }
+  end
+
+  def list_books
+    puts 'book'
+  end
+
+  def list_games
+    puts 'game'
+  end
+end

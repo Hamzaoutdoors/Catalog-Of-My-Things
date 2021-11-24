@@ -3,7 +3,6 @@
 require_relative 'item'
 require_relative 'genre'
 
-
 class MusicAlbum < Item
   attr_accessor :genre, :publish_date, :name
 
@@ -22,13 +21,11 @@ class MusicAlbum < Item
   def can_be_archived?
     super && @on_spotify
   end
- 
+
   private :can_be_archived?
 end
 
-=begin
-music = MusicAlbum.new('hamza', '2020-10-10', true)
-genre = Genre.new('Hiphup')
-genre.add_item(music)
-puts music
-=end
+# music = MusicAlbum.new('hamza', '2020-10-10', true)
+# genre = Genre.new('Hiphup')
+# genre.add_item(music)
+# puts music

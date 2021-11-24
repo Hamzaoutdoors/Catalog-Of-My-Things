@@ -86,20 +86,21 @@ module ItemIntializer
     end
   end
 
+  # Add music album to genres
+  def music_album_genre
+    list_genres
+    print "\n Select you Music Album\'s genre by number:  "
+    genre_index = gets.chomp.to_i
+    @genres[genre_index]
+  end
+
   # Create MusicAlbum main method
   def create_music_album
     name, publish_date, on_spotify = music_album_info
     music_album = MusicAlbum.new(name, publish_date, on_spotify)
+    genre = music_album_genre
+    genre.add_item(music_album)
     @music_albums << music_album
-
     puts 'Music album created successfully ✔️'
-  end
-
-  def create_book
-    puts 'book'
-  end
-
-  def create_game
-    puts 'game'
   end
 end
