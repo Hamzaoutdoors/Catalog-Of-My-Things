@@ -1,4 +1,3 @@
-require '../item'
 # Create class Book
 class Book < Item
   attr_accessor :publisher, :cover_state
