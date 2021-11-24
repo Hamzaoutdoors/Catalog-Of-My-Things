@@ -1,5 +1,5 @@
 #  rubocop:disable all
-
+require_relative 'genre'
 require './add_item_module'
 require './list_items_module'
 
@@ -12,7 +12,7 @@ class App
     @books = []
     @music_albums = []
     @games = []
-    @genres = []
+    @genres = [Genre.new('Blues'), Genre.new('Classical music'), Genre.new('Hip hop'), Genre.new('Rap'), Genre.new('Pop'), Genre.new('House')]
     @labels = []
     @authors = []
     @choice_list = {
@@ -52,6 +52,8 @@ class App
       create_item
     when '2'
       list_items
+    when '3'
+      list_genres
     else
       puts 'That is not a valid option ❌'
     end
