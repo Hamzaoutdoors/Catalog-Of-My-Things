@@ -1,7 +1,7 @@
 require './music_album'
 require './book'
 require 'date'
-
+#  rubocop:disable all
 module ItemIntializer
   def initialize
     @item_option = '0'
@@ -93,7 +93,6 @@ module ItemIntializer
     publish_date = validate_date(date_answer)
 
     print 'Is it good or bad? [good/bad]: '
-
     answer = gets.chomp.downcase
     cover_state = cover_state?(answer)
 
