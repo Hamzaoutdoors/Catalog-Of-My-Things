@@ -8,9 +8,9 @@ module ItemIntializer
 
   def items_option
     puts "\n Which item do you want to add to your catalog :"
-    puts "1) Create a book 📗"
-    puts "2) Create a Music Album 🎶"
-    puts "3) Create a Game 🎮"
+    puts '1) Create a book 📗'
+    puts '2) Create a Music Album 🎶'
+    puts '3) Create a Game 🎮'
     puts "\n"
   end
 
@@ -28,7 +28,7 @@ module ItemIntializer
   end
 
   def create_item
-    until ['1', '2', '3'].include?(@item_option)
+    until %w[1 2 3].include?(@item_option)
       items_option
       @item_option = gets.chomp
       add_selected_item
