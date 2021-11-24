@@ -12,7 +12,7 @@ class App
     @books = []
     @music_albums = []
     @games = []
-    @genres = [Genre.new('Blues'), Genre.new('Classical music'), Genre.new('Hip hop'), Genre.new('Rap'), Genre.new('Pop'), Genre.new('House')]
+    @genres = [Genre.new('Blues'), Genre.new('Classical Music'), Genre.new('Hip hop'), Genre.new('Rap'), Genre.new('Pop'), Genre.new('House')]
     @labels = []
     @authors = []
     @choice_list = {

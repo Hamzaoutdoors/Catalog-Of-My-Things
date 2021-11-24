@@ -15,7 +15,7 @@ class MusicAlbum < Item
   end
 
   def to_s
-    "Album\'s name : \" #{@name} \", Published on :#{@publish_date}"
+    "Album\'s name : \"#{@name.capitalize!}\", Genre : \"#{self.genre.name}\"  ~ Published on : #{@publish_date}"
   end
 
   def can_be_archived?
