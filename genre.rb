@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Genre Class
 require_relative 'item'
 

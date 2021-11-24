@@ -1,7 +1,12 @@
+# frozen_string_literal: true
+
 require './music_album'
 require './book'
 require 'date'
 #  rubocop:disable all
+
+# Create Module
+
 module ItemIntializer
   def initialize
     @item_option = '0'
