@@ -93,6 +93,7 @@ module ItemIntializer
   end
 
 
+
   def book_album_info
     print 'Published date (yyyy-mm-dd): '
     date_answer = gets.chomp
@@ -136,6 +137,16 @@ module ItemIntializer
     genre_index = gets.chomp.to_i
     @genres[genre_index]
   end
+
+
+  # Add music album to genres
+  def music_album_genre
+    list_genres
+    print "\n Select you Music Album\'s genre by number:  "
+    genre_index = gets.chomp.to_i
+    @genres[genre_index]
+  end
+
 
   # Create MusicAlbum main method
   def create_music_album
