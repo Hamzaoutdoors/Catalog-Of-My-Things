@@ -1,3 +1,4 @@
+#  rubocop:disable all
 require './music_album'
 
 module ListItems

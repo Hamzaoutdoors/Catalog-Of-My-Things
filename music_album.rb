@@ -1,4 +1,5 @@
 # MusicAlbum Class
+# rubocop:disable Layout/LineLength
 
 require_relative 'item'
 require_relative 'genre'
@@ -25,3 +26,5 @@ class MusicAlbum < Item
 
   private :can_be_archived?
 end
+
+# rubocop:enable Layout/LineLength
