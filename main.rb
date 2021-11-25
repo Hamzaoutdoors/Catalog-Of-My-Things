@@ -1,13 +1,14 @@
 #  rubocop:disable all
 require_relative 'genre'
-require_relative 'music_album'
 require './add_item_module'
 require './list_items_module'
+require './music_album_data'
 require 'json'
 
 class App
   include ItemIntializer
   include ListItems
+  include MusicAlbumStorage
 
   def initialize
     @books = []
@@ -57,23 +58,6 @@ class App
       list_genres
     else
       puts 'That is not a valid option ❌'
-    end
-  end
-
-  # Preserve Music album data
-
-  def save_music_albums
-    @json_music_albums = []
-    @music_albums.each do |music_album|
-      @json_music_albums.push({'name' => music_album.name, 'publish_date' => music_album.publish_date, 'on_spotify' => music_album.on_spotify})
-    end
-    File.write('music_album.json', JSON.pretty_generate(@json_music_albums))
-  end
-
-  def parse_music_albums
-    File.open('music_album.json', 'w') { |f| f.write JSON.pretty_generate([])} unless File.exist?('music_album.json')
-    JSON.parse(File.read('music_album.json')).map do |music_album|
-       @music_albums << MusicAlbum.new(music_album['name'], music_album['publish_date'], music_album['on_spotify'])
     end
   end
 
