@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 # Genre Class
-require_relative 'item'
+require_relative 'music_album'
 
 class Genre
-  attr_accessor :name
-  attr_reader :items
+  attr_reader :name, :items
 
   def initialize(name)
+    @id = Random.rand(1..1000)
     @name = name
     @items = []
   end
