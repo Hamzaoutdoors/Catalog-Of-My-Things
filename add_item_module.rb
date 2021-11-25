@@ -1,7 +1,9 @@
-# frozen_string_literal: true
-
 require './music_album'
+require './book'
 require 'date'
+
+#  rubocop:disable all
+
 # Create Module
 module ItemIntializer
   def initialize
@@ -88,6 +90,54 @@ module ItemIntializer
     end
   end
 
+
+
+  def book_album_info
+    print 'Published date (yyyy-mm-dd): '
+    date_answer = gets.chomp
+    publish_date = validate_date(date_answer)
+
+    print 'Is it good or bad? [good/bad]: '
+    answer = gets.chomp.downcase
+    cover_state = cover_state?(answer)
+
+    print 'Who is the publisher ? '
+    publisher_answer = gets.chomp.downcase
+    publisher = publisher_answer
+
+    [publish_date, publisher, cover_state]
+  end
+
+  def book_label
+    list_label
+    print "\n Select you book label by number: "
+    label_index = get.chomp.to_i
+    @labels[label_index]
+  end
+
+  def create_book
+    publish_date, publisher, cover_state = book_album_info
+    book_album = Book.new( publisher, cover_state, publish_date)
+    label = book_label
+    label.add_item(book_album)
+    @books.push(book_album)
+    puts 'Book created successfully ✔️'
+  end
+
+  def cover_state?(answer)
+    case answer
+    when 'bad'
+      false
+    when 'good'
+      true
+    else
+      print 'Could you please specify your answer by [good/bad]: '
+      new_answer = gets.chomp
+      cover_state?(new_answer)
+    end
+  end
+
+
   # Add music album to genres
   def music_album_genre
     list_genres
@@ -95,6 +145,7 @@ module ItemIntializer
     genre_index = gets.chomp.to_i
     @genres[genre_index]
   end
+
 
   # Create MusicAlbum main method
   def create_music_album
@@ -105,4 +156,6 @@ module ItemIntializer
     @music_albums << music_album
     puts 'Music album created successfully ✔️'
   end
+
+
 end

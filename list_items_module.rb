@@ -1,5 +1,6 @@
 #  rubocop:disable all
 require './music_album'
+require './book'
 
 module ListItems
   def initialize
@@ -49,7 +50,14 @@ module ListItems
   end
 
   def list_books
-    puts 'book'
+    puts "\n List of your Books : "
+    puts "\n Your books list is empty." if @books.empty?
+    @books.each { |book| puts book}
+  end
+
+  def list_label
+    puts "\n List of labels: "
+    @labels.each{ |label| puts "Title: #{label.title} Color: #{label.color}"}
   end
 
   def list_games

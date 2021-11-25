@@ -1,6 +1,4 @@
-# frozen_string_literal: true
-
-require '../item'
+require_relative 'item'
 
 # Create label class
 class Label

@@ -13,5 +13,15 @@
     "name": "Banker",
     "publish_date": "2020-10-10",
     "on_spotify": true
+  },
+  {
+    "name": "Linkin Park",
+    "publish_date": "2018-02-23",
+    "on_spotify": true
+  },
+  {
+    "name": "TOP",
+    "publish_date": "2021-08-15",
+    "on_spotify": true
   }
 ]
