@@ -57,7 +57,7 @@ module ListItems
 
   def list_label
     puts "\n List of labels: "
-    @labels.each{ |label| puts "Title: #{label.title} Color: #{label.color}"}
+    @labels.each_with_index { |label, index| puts"#{index}) Title: #{label.title} Color: #{label.color}"}
   end
 
   def list_games
