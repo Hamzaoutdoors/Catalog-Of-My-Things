@@ -111,7 +111,7 @@ module ItemIntializer
   def book_label
     list_label
     print "\n Select you book label by number: "
-    label_index = get.chomp.to_i
+    label_index = gets.chomp.to_i
     @labels[label_index]
   end
 
