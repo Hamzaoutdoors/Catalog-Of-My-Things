@@ -1,5 +1,6 @@
 #  rubocop:disable all
 require './music_album'
+require './book'
 
 module ListItems
   def initialize
