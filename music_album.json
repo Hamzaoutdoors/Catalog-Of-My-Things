@@ -1,22 +1,17 @@
 [
   {
-    "name": "Hero",
+    "name": "hamza",
     "publish_date": "2020-10-10",
     "on_spotify": true
   },
   {
-    "name": "Hamza",
-    "publish_date": "2020-10-10",
-    "on_spotify": true
-  },
-  {
-    "name": "Omar",
-    "publish_date": "2021-02-02",
+    "name": "hero 21",
+    "publish_date": "2021-11-20",
     "on_spotify": false
   },
   {
-    "name": "Hassan",
-    "publish_date": "2022-10",
+    "name": "Banker",
+    "publish_date": "2020-10-10",
     "on_spotify": true
   }
 ]

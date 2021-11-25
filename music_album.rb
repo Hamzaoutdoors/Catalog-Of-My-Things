@@ -16,7 +16,7 @@ class MusicAlbum < Item
   end
 
   def to_s
-    "Album\'s name : \"#{@name}\", ~ Published on : #{@publish_date}"
+    "Album\'s name : \"#{@name}\" ~ Published on : #{@publish_date} / #{@on_spotify ? 'Available on spotify' : 'Not available on spotify'}"
   end
 
   def can_be_archived?
