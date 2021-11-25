@@ -1,9 +1,23 @@
-<a href="https://www.microverse.org/">
+<p align="center">
+  <a href="https://www.microverse.org/">
     <img alt="Microverse" src="https://img.shields.io/badge/-Microverse-blueviolet?style=flat-square">
   </a>
+  <a href="https://github.com/Hamzaoutdoors/Catalog-Of-My-Things/blob/dev/MIT.md">
+    <img alt="MIT Licensed" src="https://img.shields.io/github/license/Hamzaoutdoors/to-do-list?style=flat-square">
+  </a>
+  <a href="https://github.com/Hamzaoutdoors/Catalog-Of-My-Things">
+    <img alt="GitHub last commit (branch)" src="https://img.shields.io/github/last-commit/Hamzaoutdoors/Catalog-Of-My-Things/dev?color=blue&style=flat-square">
+  </a>
+  <a href="https://github.com/Hamzaoutdoors/Catalog-Of-My-Things">
+    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/Hamzaoutdoors/Catalog-Of-My-Things?color=green&label=%E2%98%85%20stars%20&style=flat-square">
+  </a>
+  <a href="https://github.com/Hamzaoutdoors">
+    <img alt="GitHub followers" src="https://img.shields.io/github/followers/Hamzaoutdoors?color=yellow&logo=github&style=flat-square">
+  </a>
+</p>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white"/>  <img src="https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white"/> </div>
+ <img alt="Microverse" src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white"> <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white"/>  <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white"/>  <img src="https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white"/> </div>
 
    </br>
  <div align="center">
