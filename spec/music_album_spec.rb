@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require_relative '../music_album'
 
 RSpec.describe MusicAlbum do
   before :each do
-    @music_album = [MusicAlbum.new('2010-11-22', true), MusicAlbum.new('2021-10-22', true)]
+    @music_album = [MusicAlbum.new('Godzilla', '2010-11-22', true), MusicAlbum.new('Left side', '2021-10-22', true)]
   end
 
   it 'check if MusicAlbum is kind of Item' do

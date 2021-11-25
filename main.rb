@@ -1,30 +1,35 @@
 #  rubocop:disable all
-
+require_relative 'genre'
+require './label'
 require './add_item_module'
+require './list_items_module'
+require './music_album_data'
+require 'json'
 
 class App
   include ItemIntializer
+  include ListItems
+  include MusicAlbumStorage
 
   def initialize
     @books = []
     @music_albums = []
     @games = []
-    @genres = []
-    @labels = []
+    @genres = [Genre.new('Blues'), Genre.new('Classical Music'), Genre.new('Hip hop'), Genre.new('Rap'), Genre.new('Pop'), Genre.new('House')]
+    @labels = [Label.new('Juan de los palates', 'Blue'),Label.new('Juan de los palates', 'Blue'),Label.new('Juan de los palates', 'Blue')]
     @authors = []
     @choice_list = {
       '1' => 'Create an Item',
-      '2' => 'List all books.',
-      '3' => 'List all music albums.',
-      '4' => 'List of games.',
-      '5' => 'List all genres.',
-      '6' => 'List all labels.',
-      '7' => 'List all authors.',
-      '8' => 'Exit'
+      '2' => 'List all items.',
+      '3' => 'List all genres.',
+      '4' => 'List all labels.',
+      '5' => 'List all authors.',
+      '6' => 'Exit'
     }  
   end
 
   def run
+    parse_music_albums
     puts "Welcome to the Catalog of your Things 🗂️ \n"
 
     loop do
@@ -35,14 +40,13 @@ class App
       end
       print "\nYour option ==> "
       option = gets.chomp
-      if option == '10'
+      if option == '6'
+        exit
         break
       end
 
       handle_option(option)
     end
-
-    puts "\n Thank you for using this app 🙏🏻"
   end
 
   def handle_option(option)
@@ -50,14 +54,23 @@ class App
     when '1'
       create_item
     when '2'
-      puts 'hey'
+      list_items
+    when '3'
+      list_genres
+    when '4'
+      list_label
     else
       puts 'That is not a valid option ❌'
     end
+  end
+
+  def exit
+    save_music_albums
+    puts "\n Your data is preserved in our DB"
+    puts " Thank you for using this app 🙏🏻"
   end
 end
 
 
 app = App.new
-
 app.run

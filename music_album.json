@@ -1,0 +1,22 @@
+[
+  {
+    "name": "hamza",
+    "publish_date": "2020-10-10",
+    "on_spotify": true
+  },
+  {
+    "name": "hero 21",
+    "publish_date": "2021-11-20",
+    "on_spotify": false
+  },
+  {
+    "name": "Banker",
+    "publish_date": "2020-10-10",
+    "on_spotify": true
+  },
+  {
+    "name": "Linkin Park",
+    "publish_date": "2018-02-23",
+    "on_spotify": true
+  }
+]
