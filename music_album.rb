@@ -4,7 +4,8 @@ require_relative 'item'
 require_relative 'genre'
 
 class MusicAlbum < Item
-  attr_accessor :genre, :publish_date, :name
+  attr_accessor :name, :genre, :publish_date
+  attr_reader :on_spotify
 
   DEFAULT_BOOL = false
 
@@ -15,7 +16,7 @@ class MusicAlbum < Item
   end
 
   def to_s
-    "Album\'s name : \"#{@name.capitalize!}\", Genre : \"#{self.genre.name}\"  ~ Published on : #{@publish_date}"
+    "Album\'s name : \"#{@name}\", ~ Published on : #{@publish_date}"
   end
 
   def can_be_archived?
