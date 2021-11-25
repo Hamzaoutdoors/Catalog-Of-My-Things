@@ -1,6 +1,7 @@
 #  rubocop:disable all
 require_relative 'genre'
 require './label'
+require './author'
 require './add_item_module'
 require './list_items_module'
 require './music_album_data'
@@ -19,7 +20,7 @@ class App
     @games = []
     @genres = [Genre.new('Blues'), Genre.new('Classical Music'), Genre.new('Hip hop'), Genre.new('Rap'), Genre.new('Pop'), Genre.new('House')]
     @labels = [Label.new('Love at the end of the day.', 'Blue'),Label.new('May I love you?', 'Red'),Label.new('The love of my lives.', 'Grey')]
-    @authors = []
+    @authors = [Author.new('Kang', 'Adventure'), Author.new('Luis', 'Action'), Author.new('Melissa', 'Horror'), Author.new('Mo', 'Sport')]
     @choice_list = {
       '1' => 'Create an Item',
       '2' => 'List all items.',
