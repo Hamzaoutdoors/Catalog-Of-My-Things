@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Hero",
+    "publish_date": "2020-10-10",
+    "on_spotify": true
+  },
+  {
+    "name": "Hamza",
+    "publish_date": "2020-10-10",
+    "on_spotify": true
+  },
+  {
+    "name": "Omar",
+    "publish_date": "2021-02-02",
+    "on_spotify": false
+  },
+  {
+    "name": "Hassan",
+    "publish_date": "2022-10",
+    "on_spotify": true
+  }
+]
