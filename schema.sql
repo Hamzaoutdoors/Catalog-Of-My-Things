@@ -1,7 +1,12 @@
 /* Database schema analogical to the structure of the classes in our app. */
 
 -- Create book table 
-
+CREATE TABLE books (
+label_id SERIAL,
+title VARCHAR(30),
+color VARCHAR(30)
+PRIMARY KEY(label_id)
+);
 
 -- Create music album table 
 CREATE TABLE music_albums (
