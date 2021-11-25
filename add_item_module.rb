@@ -1,5 +1,6 @@
 require './music_album'
 require './book'
+require './game'
 require 'date'
 
 #  rubocop:disable all
@@ -159,3 +160,48 @@ module ItemIntializer
 
 
 end
+
+def game_info
+  print 'Last played at (yyyy-mm-dd): '
+  date_answer = gets.chomp
+  last_played_at = date_answer
+
+  print 'Is it Multiplayer? [Y/N]: '
+  answer = gets.chomp.downcase
+  multiplayer = multiplayer?(answer)
+
+  print 'Publish date (yyyy-mm-dd): '
+  publisher_answer = gets.chomp
+  publish_date = validate_date(date_answer)
+
+  [last_played_at, publish_date, multiplayer]
+end
+
+def game_author
+  list_author
+  print "\n Select your author by number: "
+  author_index = gets.chomp.to_i
+  @authors[author_index]
+end
+
+def create_game
+  publish_date, multiplayer, last_played_at = game_info
+  game = Game.new( publish_date, multiplayer, last_played_at)
+  author = game_author
+  author.add_item(game)
+  @games.push(game)
+  puts 'Game created successfully ✔️'
+end
+
+def multiplayer?(answer)
+  case answer
+  when 'n'
+    false
+  when 'y'
+    true
+  else
+    print 'Could you please specify your answer by [Y/N]: '
+    new_answer = gets.chomp
+    multiplayer?(new_answer)
+  end
+ end
