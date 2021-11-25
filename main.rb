@@ -18,7 +18,7 @@ class App
     @music_albums = []
     @games = []
     @genres = [Genre.new('Blues'), Genre.new('Classical Music'), Genre.new('Hip hop'), Genre.new('Rap'), Genre.new('Pop'), Genre.new('House')]
-    @labels = [Label.new('Juan de los palates', 'Blue'),Label.new('Juan de los palates', 'Blue'),Label.new('Juan de los palates', 'Blue')]
+    @labels = [Label.new('Love at the end of the day.', 'Blue'),Label.new('May I love you?', 'Red'),Label.new('The love of my lives.', 'Grey')]
     @authors = []
     @choice_list = {
       '1' => 'Create an Item',

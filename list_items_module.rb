@@ -50,7 +50,6 @@ module ListItems
   end
 
   def list_books
-
     puts "\n List of your Books : "
     puts "\n Your books list is empty." if @books.empty?
     @books.each { |book| puts book}

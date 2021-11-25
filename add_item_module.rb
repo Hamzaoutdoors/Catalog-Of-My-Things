@@ -101,18 +101,27 @@ module ItemIntializer
     answer = gets.chomp.downcase
     cover_state = cover_state?(answer)
 
-    print 'Who is the publisher? '
+    print 'Who is the publisher ? '
     publisher_answer = gets.chomp.downcase
     publisher = publisher_answer
 
-    puts 'Book created successfully ✔️'
     [publish_date, publisher, cover_state]
+  end
+
+  def book_label
+    list_label
+    print "\n Select you book label by number: "
+    label_index = get.chomp.to_i
+    @labels[label_index]
   end
 
   def create_book
     publish_date, publisher, cover_state = book_album_info
     book_album = Book.new( publisher, cover_state, publish_date)
+    label = book_label
+    label.add_item(book_album)
     @books.push(book_album)
+    puts 'Book created successfully ✔️'
   end
 
   def cover_state?(answer)
@@ -126,14 +135,6 @@ module ItemIntializer
       new_answer = gets.chomp
       cover_state?(new_answer)
     end
-  end
-
-  # Add music album to genres
-  def music_album_genre
-    list_genres
-    print "\n Select you Music Album\'s genre by number:  "
-    genre_index = gets.chomp.to_i
-    @genres[genre_index]
   end
 
 
@@ -155,4 +156,6 @@ module ItemIntializer
     @music_albums << music_album
     puts 'Music album created successfully ✔️'
   end
+
+
 end
