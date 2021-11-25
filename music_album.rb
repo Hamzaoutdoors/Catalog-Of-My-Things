@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # MusicAlbum Class
 # rubocop:disable Layout/LineLength
 

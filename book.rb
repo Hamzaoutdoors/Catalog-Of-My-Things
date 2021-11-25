@@ -1,4 +1,5 @@
-require '../item'
+# frozen_string_literal: true
+
 # Create class Book
 class Book < Item
   attr_accessor :publisher, :cover_state

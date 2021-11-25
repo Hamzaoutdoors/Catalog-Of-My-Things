@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require './music_album'
 require 'date'
-
+# Create Module
 module ItemIntializer
   def initialize
     @item_option = '0'
