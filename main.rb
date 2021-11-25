@@ -2,11 +2,13 @@
 require_relative 'genre'
 require './add_item_module'
 require './list_items_module'
-
+require './music_album_data'
+require 'json'
 
 class App
   include ItemIntializer
   include ListItems
+  include MusicAlbumStorage
 
   def initialize
     @books = []
@@ -26,6 +28,7 @@ class App
   end
 
   def run
+    parse_music_albums
     puts "Welcome to the Catalog of your Things 🗂️ \n"
 
     loop do
@@ -37,13 +40,12 @@ class App
       print "\nYour option ==> "
       option = gets.chomp
       if option == '6'
+        exit
         break
       end
 
       handle_option(option)
     end
-
-    puts "\n Thank you for using this app 🙏🏻"
   end
 
   def handle_option(option)
@@ -58,9 +60,14 @@ class App
       puts 'That is not a valid option ❌'
     end
   end
+
+  def exit
+    save_music_albums
+    puts "\n Your data is preserved in our DB"
+    puts " Thank you for using this app 🙏🏻"
+  end
 end
 
 
 app = App.new
-
 app.run
