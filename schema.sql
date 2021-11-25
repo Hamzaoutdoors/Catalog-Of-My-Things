@@ -12,14 +12,14 @@ CREATE TABLE music_albums (
   genre_id INT,
   label_id INT,
   author_id INT,
-  CONSTRAINT fk_genre FOREIGN KEY (genre_id) REFERENCES genre(genre_id)
-  CONSTRAINT fk_label FOREIGN KEY (label_id) REFERENCES label(label_id)
-  CONSTRAINT fk_author FOREIGN KEY (author_id) REFERENCES author(author_id)
+  CONSTRAINT fk_genre FOREIGN KEY (genre_id) REFERENCES genres(genre_id)
+  CONSTRAINT fk_label FOREIGN KEY (label_id) REFERENCES labels(label_id)
+  CONSTRAINT fk_author FOREIGN KEY (author_id) REFERENCES authors(author_id)
   PRIMARY KEY(id)
 );
 
 -- Create genre table 
-CREATE TABLE genre (
+CREATE TABLE genres (
   genre_id SERIAL,
   name VARCHAR(30),
   PRIMARY KEY(genre_id)
