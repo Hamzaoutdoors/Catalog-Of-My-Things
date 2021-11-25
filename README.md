@@ -27,7 +27,12 @@
 
 # Ruby Group Capstone : Catalog of my things
 
-> In this project, we create a console app that will help you to keep a record of different types of things you won: books, music albums, movies, and games. Everything will be based on the UML class diagram presented below. The data will be stored in JSON files but you will also prepare a database with tables structure analogical to your program's class structure.
+In this project, we create a console app that will help you to keep a record of different types of things you won: 
+ - **Books**
+ - **Music albums**
+ - **Games** 
+
+Everything will be based on the UML class diagram presented below. The data will be stored in JSON files, furthermore, we prepared a database with tables structure analogical to the program's class structure.
 
 </br>
  <div align="center">
@@ -37,15 +42,31 @@
    </kbd>
 </div>
 
+## Getting Started
+To get a local copy up and running follow these simple example steps :
+
+ - First of all make sure you have `Ruby` installed in your machine
+ - clone the project with the following command line : 
+```
+$ git clone git@github.com:aliabbani/Catalog-of-my-things.git
+```
+
+ - Then go to the right folder 
+```
+$ cd Catalog-of-my-things
+```
+ - Start using the app by runing `ruby main.rb` on your terminal
+ - Follow the app instructions.
+
 ## Built With
----
+
  - Ruby  <img src="https://cdn.emojidex.com/emoji/seal/Ruby.png" width=15px>
  - PostgreSQL <img src="https://user-images.githubusercontent.com/80895497/142954032-f7072df9-3586-48f9-a9e0-7fdd284eb833.png" width=15px>
  
 </br>
 
 ## Authors
----
+
 
 👤 **Carlos Feliz**
 
