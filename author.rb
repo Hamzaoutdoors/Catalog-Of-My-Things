@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Create class Author
 class Author
   attr_accessor :first_name, :last_name, :items

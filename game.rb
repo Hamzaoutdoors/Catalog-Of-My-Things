@@ -1,5 +1,4 @@
-# frozen_string_literal: true
-
+# rubocop:disable Layout/LineLength
 require_relative 'item'
 
 # Create class Game
@@ -21,3 +20,4 @@ class Game < Item
     Date.today > Date.iso8601(@last_played_at).next_year(2) || super
   end
 end
+# rubocop:enable Layout/LineLength
