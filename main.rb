@@ -6,6 +6,7 @@ require './add_item_module'
 require './list_items_module'
 require './music_album_data'
 require './book_album_data'
+require './game_data'
 require 'json'
 
 class App
@@ -13,6 +14,7 @@ class App
   include ListItems
   include MusicAlbumStorage
   include BookStorage
+  include GameStorage
 
   def initialize
     @books = []
@@ -34,6 +36,7 @@ class App
   def run
     parse_music_albums
     parse_book
+    parse_game
     puts "Welcome to the Catalog of your Things 🗂️ \n"
 
     loop do
@@ -71,6 +74,7 @@ class App
   def exit
     save_music_albums
     save_book
+    save_game
     puts "\n Your data is preserved in our DB"
     puts " Thank you for using this app 🙏🏻"
   end

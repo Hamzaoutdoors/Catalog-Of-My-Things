@@ -8,7 +8,9 @@ class Game < Item
     @last_played_at = last_played_at
   end
 
-  private
+  def to_s
+    "Game\'s last played at : #{@last_played_at} ~ Published on : #{@publish_date} ~ Multiplayer: #{@multiplayer ? 'Yes' : 'No'}"  
+  end
 
   def can_be_archived?
     Date.today > Date.iso8601(@last_played_at).next_year(2) || super
