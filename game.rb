@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'item'
 
 # Create class Game
@@ -9,7 +11,7 @@ class Game < Item
   end
 
   def to_s
-    "Game\'s last played at : #{@last_played_at} ~ Published on : #{@publish_date} ~ Multiplayer: #{@multiplayer ? 'Yes' : 'No'}"  
+    "Game\'s last played at : #{@last_played_at} ~ Published on : #{@publish_date} ~ Multiplayer: #{@multiplayer ? 'Yes' : 'No'}"
   end
 
   def can_be_archived?
