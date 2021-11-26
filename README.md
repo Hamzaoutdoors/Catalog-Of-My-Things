@@ -2,7 +2,7 @@
   <a href="https://www.microverse.org/">
     <img alt="Microverse" src="https://img.shields.io/badge/-Microverse-blueviolet?style=flat-square">
   </a>
-  <a href="https://github.com/Hamzaoutdoors/Catalog-Of-My-Things/blob/dev/MIT.md">
+  <a href="https://github.com/Hamzaoutdoors/Catalog-Of-My-Things/blob/dev/LICENSE.md">
     <img alt="MIT Licensed" src="https://img.shields.io/github/license/Hamzaoutdoors/to-do-list?style=flat-square">
   </a>
   <a href="https://github.com/Hamzaoutdoors/Catalog-Of-My-Things">
@@ -95,7 +95,7 @@ $ cd Catalog-of-my-things
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Hamzaoutdoors/Catalog-Of-My-Things /issues).
+Feel free to check the [issues page](https://github.com/Hamzaoutdoors/Catalog-Of-My-Things/issues).
 
 ## Show your support
 
@@ -111,5 +111,5 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](https://github.com/Hamzaoutdoors/Catalog-Of-My-Things/blob/dev/MIT.md) licensed.
+This project is [MIT](https://github.com/Hamzaoutdoors/Catalog-Of-My-Things/blob/dev/LICENSE.md) licensed.
 
