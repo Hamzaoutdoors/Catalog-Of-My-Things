@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require_relative '../game'
 
 RSpec.describe Game do
   before :each do
-    @game = [Game.new('2021-11-23', true,'2010-11-22'), Game.new('2021-11-25', true, '2021-10-22')]
+    @game = [Game.new('2021-11-23', true, '2010-11-22'), Game.new('2021-11-25', true, '2021-10-22')]
   end
 
   it 'check if game is kind of Item' do

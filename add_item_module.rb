@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require './music_album'
 require './book'
 require './game'
