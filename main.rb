@@ -3,6 +3,7 @@ require_relative 'genre'
 require './label'
 require './author'
 require './add_item_module'
+require './delete_item_module'
 require './list_items_module'
 require './music_album_data'
 require './book_album_data'
@@ -11,6 +12,7 @@ require 'json'
 
 class App
   include ItemIntializer
+  include ItemKiller
   include ListItems
   include MusicAlbumStorage
   include BookStorage
@@ -25,11 +27,12 @@ class App
     @authors = [Author.new('Kang', 'Adventure'), Author.new('Luis', 'Action'), Author.new('Melissa', 'Horror'), Author.new('Mo', 'Sport')]
     @choice_list = {
       '1' => 'Create an Item',
-      '2' => 'List all items.',
-      '3' => 'List all genres.',
-      '4' => 'List all labels.',
-      '5' => 'List all authors.',
-      '6' => 'Exit'
+      '2' => 'Delete an Item',
+      '3' => 'List all items.',
+      '4' => 'List all genres.',
+      '5' => 'List all labels.',
+      '6' => 'List all authors.',
+      '7' => 'Exit'
     }  
   end
 
@@ -42,12 +45,10 @@ class App
     loop do
       puts "\nPlease choose your option by entering a number 😊 :"
       puts "\n"
-      @choice_list.each do |key, value|
-        puts "#{key} - #{value}"
-      end
+      catalog_list
       print "\nYour option ==> "
       option = gets.chomp
-      if option == '6'
+      if option == '7'
         exit
         break
       end
@@ -56,16 +57,26 @@ class App
     end
   end
 
+  def catalog_list
+    @choice_list.each do |key, value|
+      puts "#{key} - #{value}"
+    end
+  end
+
   def handle_option(option)
     case option
     when '1'
       create_item
     when '2'
-      list_items
+      delete_item
     when '3'
-      list_genres
+      list_items
     when '4'
+      list_genres
+    when '5'
       list_label
+    when '6'
+      list_authors
     else
       puts 'That is not a valid option ❌'
     end

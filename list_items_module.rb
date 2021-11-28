@@ -67,7 +67,7 @@ module ListItems
     @games.each { |game| puts game}
   end
 
-  def list_author
+  def list_authors
     puts "\n List of authors : "
     @authors.each_with_index { |author, index| puts "#{index}) Author ~ #{author.first_name} #{author.last_name}" }
   end

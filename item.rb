@@ -2,8 +2,7 @@ require 'date'
 
 # Create class ITEM
 class Item
-  attr_accessor :publish_date, :genre, :author, :label
-  attr_reader :id
+  attr_accessor :publish_date, :genre, :author, :label, :id
 
   def initialize(publish_date)
     @id = Random.rand(1..10_000)
