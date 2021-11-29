@@ -54,12 +54,12 @@ To get a local copy up and running follow these simple example steps :
  - First of all make sure you have `Ruby` installed in your machine
  - clone the project with the following command line : 
 ```
-$ git clone git@github.com:aliabbani/Catalog-of-my-things.git
+$ git clone git@github.com:Hamzaoutdoors/Catalog-of-my-things.git
 ```
 
  - Then go to the right folder 
 ```
-$ cd Catalog-of-my-things
+$ cd Catalog-Of-My-Things
 ```
  - Start using the app by runing `ruby main.rb` on your terminal
  - Follow the app instructions.
